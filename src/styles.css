@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card{
+    @apply bg-stone-300 rounded-lg overflow-hidden p-5
+}

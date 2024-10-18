@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clorinde Gallery</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <script src="../cdn.tailwind.config.js"></script>
+</head>
+<body class="text-stone-600 bg-stone-200 font-mono">
+    <div class="md:grid grid-cols-10">
+        <div>
+            <nav>
+                <div class="text-neutral-700 font-bold text-3xl">
+                    <h1 class="p-5 border-b-2 border-r-2 border-stone-600 rounded-lg shadow-md">
+                        <span class="font-seymour">Clorinde Gallery</span>
+                    </h1>
+                </div>
+                <ul class="text-xl p-5">
+                    <li class="mb-5">
+                        <a href="./">
+                            <span>Gallery</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./about.html">
+                            <span>About</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <main class="px-20 col-span-9">
+            <div class="p-5 flex justify-end text-stone-500">
+                <a href="/login" class="px-3 py-2 border-2 border-stone-600 rounded-lg bg-stone-300 shadow-md">Login</a>
+                <a href="/register" class="ml-3 px-3 py-2 border-2 border-stone-600 rounded-lg bg-stone-300 shadow-md">Register</a>
+            </div>
+
+            <header class="text-3xl font-semibold py-5">
+                <h2>Picture</h2> 
+            </header>
+            <script>
+                function LikeCounter(button, id) {
+                    var likeCounter = document.getElementById(id);
+                    var currentCount = parseInt(likeCounter.innerText);
+                    likeCounter.innerText = currentCount + 1;
+                    button.disabled = true;
+                    button.classList.add('bg-gray-300');
+                }
+            </script>
+            <div class="p-5 border-2 border-stone-600 mb-5 bg-stone-300 rounded-lg shadow-md">
+                <h4 class="text-2xl text-stone-600 font-semibold mb-3">Latest Picture</h4>
+                <div class="rounded-lg overflow-hidden p-5"> 
+                    <!-- cards here -->
+                    <div class="grid lg:grid-cols-3 gap-5">
+                        <img src="img/charlotte.jpg" alt="charlotte" class="col-span-2 border-2 border-stone-100 rounded-lg shadow-md object-cover">
+                        <div class="p-5 ml-5">
+                            <span class="text-xl">Kid with Balloon</span>
+                            <span class="block text-stone-500">Feat Charlotte</span>
+                            <button class="mt-5 px-3 py-2 border-2 border-stone-600 rounded-lg bg-green-300 shadow-md hover:scale-105 transition-all duration-300" onclick="LikeCounter(this, 'likeCounter');">Like</button>
+                            <span id="likeCounter" class="ml-3">65</span>
+                            <span>Likes</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="p-5 border-2 border-stone-600 mb-5 bg-stone-300 rounded-lg shadow-md">
+                <h4 class="text-2xl text-stone-600 font-semibold mb-3">Most Popular</h4>
+                <div class="rounded-lg overflow-hidden p-5">
+                    <!-- cards here -->
+                    <div class="mb-10 grid lg:grid-cols-3 gap-5">
+                        <img src="img/neuvilette.jpg" alt="neuvilette" class="col-span-2 border-2 border-stone-100 rounded-lg shadow-md object-cover">
+                        <div class="p-5 ml-5">
+                            <span class="text-xl">Feeding Bird</span>
+                            <span class="block text-stone-500">Feat Neuvilette</span>
+                            <button class="mt-5 px-3 py-2 border-2 border-stone-600 rounded-lg bg-green-300 shadow-md hover:scale-105 transition-all duration-300" onclick="LikeCounter(this, 'likeCounter2');">Like</button>
+                            <span id="likeCounter2" class="ml-3">319</span>
+                            <span>Likes</span>
+                        </div>
+                    </div>
+                    <div class="mt-5 grid lg:grid-cols-3 gap-5">
+                        <img src="img/navia.jpg" alt="navia" class="col-span-2 border-2 border-stone-100 rounded-lg shadow-md object-cover">
+                        <div class="p-5 ml-5">
+                            <span class="text-xl">Tea Time</span>
+                            <span class="block text-stone-500">Feat Navia</span>
+                            <button class="mt-5 px-3 py-2 border-2 border-stone-600 rounded-lg bg-green-300 shadow-md hover:scale-105 transition-all duration-300" onclick="LikeCounter(this, 'likeCounter3');">Like</button>
+                            <span id="likeCounter3" class="ml-3">233</span>
+                            <span>Likes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 flex">
+                <div class="px-3 py-2 border-2 border-stone-600 rounded-lg bg-stone-300 shadow-md">Load more</div>
+            </div>
+            
+        </main>
+    </div>
+
+    <footer class="mt-12">
+        <div>
+            <span>ClorindeGallery</span>
+            <span>2024</span>
+        </div>
+</body>
+</html>
